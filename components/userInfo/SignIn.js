@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Modal, Text, TouchableHighlight, View, Alert} from 'react-native';
 import { TextInput } from 'react-native-gesture-handler';
+import { FirebaseWrapper } from '../../firebase/firebase';
 
 export class SignIn extends Component {
   constructor() {
@@ -14,6 +15,13 @@ export class SignIn extends Component {
 
   setModalVisible(visible) {
     this.setState({ modalVisible: visible });
+  }
+  async CreateNewUser(){
+    try {
+      await FirebaseWrapper.GetInstance().CreateNewDocument('users', {email: this.state.email}, {password: this.state.password})
+    } catch (error) {
+      console.log('It didn\'t work', error)
+    }
   }
 
   render() {
