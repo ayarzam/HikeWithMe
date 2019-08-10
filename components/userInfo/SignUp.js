@@ -1,12 +1,15 @@
 import React, {Component} from 'react';
-import {Modal, Text, TouchableHighlight, View, Alert} from 'react-native';
+import {Modal, Text, TouchableHighlight, View, Alert, Button} from 'react-native';
 import { TextInput } from 'react-native-gesture-handler';
+import { FirebaseWrapper } from '../../firebase/firebase'
 
+//let this be the only modal class, make sign in available on the main page
 export class SignUp extends Component {
   constructor() {
     super();
     this.state = {
-      modalVisible: false, 
+      modalVisible: false,
+      name: '',
       email: '',
       password: ''
     };
@@ -14,6 +17,13 @@ export class SignUp extends Component {
 
   setModalVisible(visible) {
     this.setState({ modalVisible: visible });
+  }
+  async createNewUser(){
+    try {
+      await FirebaseWrapper.GetInstance().CreateNewDocument('users', {name: this.state.name, email: this.state.email, password: this.state.password})
+    } catch (error) {
+      console.log('It didn\'t work', error)
+    }
   }
 
   render() {
@@ -29,6 +39,13 @@ export class SignUp extends Component {
         >
           <View style={{ marginTop: 30 }}>
             <View style={{ marginBottom: 15 }}>
+            <View style={{ marginTop: 30 }}>
+                <TextInput
+                placeholder="Enter your Name"
+                onChangeText={name => this.setState({ name })}
+                value={this.state.name}
+                />
+              </View>
               <View style={{ marginTop: 30 }}>
                 <TextInput
                 placeholder="Enter your Email"
@@ -50,6 +67,7 @@ export class SignUp extends Component {
               </TouchableHighlight>
             </View>
           </View>
+          <Button title='Sign Up' onPress={() => this.createNewUser()} />
         </Modal>
 
         <TouchableHighlight

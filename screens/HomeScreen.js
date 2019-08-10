@@ -19,7 +19,7 @@ import  MyMaps  from '../components/MyMaps'
 export default class HomeScreen extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         <Image
           style={styles.welcomeImage}
           source={{
@@ -27,13 +27,15 @@ export default class HomeScreen extends React.Component {
               "https://www.planetware.com/wpimages/2018/09/oregon-sublimity-best-hiking-trails-trails-silver-falls-state-park-trail-of-ten-falls.jpg"
           }}
         />
-        <View>
+        <SignUp />
+        <SignIn />
+        {/* <View>
           <Button title="Sign In" onPress={() => SignIn} />
         </View>
         <View>
           <Button title="Sign Up" onPress={() => SignUp} />
-        </View>
-      </View>
+        </View> */}
+      </ScrollView>
     );
   }
 }
