@@ -224,6 +224,7 @@ export default class App extends React.Component {
       <MapView
         provide={PROVIDER_GOOGLE}
         customMapStyle={mapStyle}
+        googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxzDBk-4CNB_XCHCLT-I2XsjeXmsVE-DQ&callback=initMap"
         region={{
           latitude: 42.882004,
           longitude: 74.582748,

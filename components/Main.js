@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Platform, Image, Text, View } from 'react-native'
+import { StyleSheet, Platform, Image, Text, View, Button } from 'react-native'
 import * as firebase from 'firebase'
 
 export default class Main extends React.Component {
@@ -24,6 +24,10 @@ return (
         <Text>
           Hi {currentUser && currentUser.email}!
         </Text>
+        <Button
+          title="Log a New Hike"
+          onPress={() => this.props.navigation.navigate('MyMaps')}
+        />
       </View>
     )
   }
