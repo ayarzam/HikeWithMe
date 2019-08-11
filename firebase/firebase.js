@@ -25,9 +25,23 @@ export class FirebaseWrapper{
   async CreateNewDocument(collectionPath, doc){
     try {
       const ref = this._firestore.collection(collectionPath).doc()
-      return await ref.set({...doc, id: ref.id})
+      const timestamp = firebase.firestore.Timestamp.now().toDate()
+      return await ref.set({...doc, timestamp, id: ref.id})
     } catch (error) {
       console.log('It didn\'t work', error )
+    }
+  }
+  async SetUpCollectionListener(collectionPath, callback){
+    try {
+      await this._firestore.collectiom(collectionPath).orderBy('createAt', 'desc').onSnapshot(querySnapshot => {
+          let container = []
+          querySnapshot.forEach(doc => {
+            container.push(doc.data())
+          })
+          return callback(container)
+      })
+    } catch (error) {
+      console.log('You didn\'t return any info', error)
     }
   }
 }

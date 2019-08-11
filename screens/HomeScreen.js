@@ -12,30 +12,14 @@ import {
 } from 'react-native';
 
 import { MonoText } from '../components/StyledText';
-import { SignIn } from '../components/userInfo/SignIn'
-import { SignUp } from '../components/userInfo/SignUp'
-import  MyMaps  from '../components/MyMaps'
+
 
 export default class HomeScreen extends React.Component {
   render() {
     return (
-      <ScrollView style={styles.container}>
-        <Image
-          style={styles.welcomeImage}
-          source={{
-            uri:
-              "https://www.planetware.com/wpimages/2018/09/oregon-sublimity-best-hiking-trails-trails-silver-falls-state-park-trail-of-ten-falls.jpg"
-          }}
-        />
-        <SignUp />
-        <SignIn />
-        {/* <View>
-          <Button title="Sign In" onPress={() => SignIn} />
-        </View>
-        <View>
-          <Button title="Sign Up" onPress={() => SignUp} />
-        </View> */}
-      </ScrollView>
+      <View style={{marginTop: 30}}>
+      <Text>This is the Home Screen</Text>
+      </View>
     );
   }
 }
@@ -82,7 +66,7 @@ function handleHelpPress() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#a9a9a9",
+    backgroundColor: "#ffff",
     marginTop: 30
   },
   developmentModeText: {
