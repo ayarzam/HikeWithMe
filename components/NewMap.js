@@ -116,7 +116,9 @@ export default class NewMap extends React.Component {
               {parseFloat(this.state.distanceTravelled).toFixed(2)} km
             </Text>
           </TouchableOpacity>
-          <Button title='Start Hike'>Start Hike</Button> 
+          <View style={{backgroundColor: 'orange', marginRight: 15}}>
+            <Button color='white' title='Start Hike'>Start Hike</Button>
+          </View>
         </View>
       </View>
     );
