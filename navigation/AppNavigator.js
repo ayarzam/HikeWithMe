@@ -7,6 +7,7 @@ import SignUp from '../components/userInfo/SignUp'
 import Login from '../components/userInfo/Login'
 import  Main from  '../components/Main'
 import MyMaps from '../components/MyMaps'
+import NewMap from '../components/NewMap'
 
 export default createAppContainer(
   createSwitchNavigator({
@@ -14,7 +15,9 @@ export default createAppContainer(
     Login,
     SignUp,
     Main,
-    MyMaps
+    MyMaps,
+    NewMap
+
   },
   {
     initialRouteName: 'Loading',
