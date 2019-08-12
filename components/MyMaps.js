@@ -118,4 +118,3 @@ export default class MyMaps extends Component {
     );
   }
 }
- 
