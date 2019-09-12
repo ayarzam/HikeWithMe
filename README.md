@@ -12,9 +12,14 @@ Futher direction for this project include the ability to save a hike, the abilit
 
 
 # To run the app for testing you will need to download Expo! 
-# Clone the repository 
-# npm install 
-# npm start
-# Scan the QR code using your phone's camera
-# Expo will launch and Bundle javascript 
-# You will then have access to to Hike With Me
+  Clone the repository 
+  
+  npm install 
+  
+  npm start
+  
+  Scan the QR code using your phone's camera
+  
+  Expo will launch and Bundle javascript 
+  
+  You will then have access to to Hike With Me
