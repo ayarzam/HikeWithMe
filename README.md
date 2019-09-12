@@ -11,7 +11,9 @@ Some challenges faced while working on this project include the integration of m
 Future direction for this project include the ability to save a hike, the ability for the user to navigate all of their hiking logs, creating and building out a message board that allows the user to communicate and connect with friends. 
 
 
-# To run the app for testing you will need to download Expo! 
+# To run the app for testing 
+  First download Expo
+  
   Clone the repository 
   
   npm install 
