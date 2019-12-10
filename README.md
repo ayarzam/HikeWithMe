@@ -23,7 +23,7 @@ The video walkthrough contains a video of the "Hike With Me" from the login/sign
   
   npm install 
   
-  You will need an api key from the Google Firestore for the app to work, you may obtain one here
+  You will need an api key from the Google Firestore for the app to work, you may obtain one [here](https://cloud.google.com/firestore/)
   
   npm start
   
