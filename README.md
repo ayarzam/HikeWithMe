@@ -25,6 +25,8 @@ The video walkthrough contains a video of the "Hike With Me" from the login/sign
   
   You will need an api key from the Google Firestore for the app to work, you may obtain one [here](https://cloud.google.com/firestore/)
   
+  Once you obtain an api key and firebase configuration copy and paste the info in a file named config.js in the firebase folder
+  
   npm start
   
   Scan the QR code using your phone's camera
