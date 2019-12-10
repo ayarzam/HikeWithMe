@@ -10,6 +10,11 @@ Some challenges faced while working on this project include the integration of m
 
 Future direction for this project include the ability to save a hike, the ability for the user to navigate all of their hiking logs, creating and building out a message board that allows the user to communicate and connect with friends. 
 
+# Video Walkthrough 
+
+[Video Walkthrough](https://youtu.be/dddSGT1LumY)
+The video walkthrough contains a video of the "Hike With Me" from the login/signup screen to rendering a map. The end frame shows a sharp change in direction this happened because I lost phone service for a while so the app compensated by drawing a line from the geolocation logged before I lost service to my current location.
+  
 
 # To run the app for testing 
   First download Expo
