@@ -27,8 +27,8 @@ export default class Main extends React.Component {
         }}
         style={{ width: '100%', height: '100%' }}
       >
-        <ScrollView style={styles.container}>
-          <Text style={{ textAlign: 'center', fontSize: 25, fontWeight: 600, color: 'gray' }}>
+        <ScrollView style={styles.contentContainer}>
+          <Text style={{ textAlign: 'center', fontSize: 25, fontWeight: "600", color: 'gray' }}>
             Hi {currentUser && currentUser.email}!
           </Text>
           <View>
@@ -52,8 +52,8 @@ export default class Main extends React.Component {
             <View
               style={{
                 marginTop: 70,
-                flexDirect: 'column',
-                justifyContent: 'start',
+                flexDirection: 'column',
+                justifyContent: 'flex-start',
                 alignItems: 'center',
                 alignContent: 'center',
                 borderWidth: 2,
@@ -62,11 +62,11 @@ export default class Main extends React.Component {
               }}
             >
               <Text
-                style={{ fontSize: 16, fontWeight: 500, color: 'white'}}
+                style={{ fontSize: 16, fontWeight: "500", color: 'white'}}
               >
                 You Hiked 4.5 miles in 1hr 30 minutes{' '}
               </Text>
-              <Text style={{ marginTop: 10, fontSize: 16, fontWeight: 600, color: 'white'}}> 8/11/19</Text>
+              <Text style={{ marginTop: 10, fontSize: 16, fontWeight: "600", color: 'white'}}> 8/11/19</Text>
             </View>
           </View>
           <View style={{marginTop: 100, backgroundColor: 'orange'}}>
@@ -84,8 +84,8 @@ export default class Main extends React.Component {
 const styles = StyleSheet.create({
   container: {
     marginTop: 100,
-    flexDirect: 'column',
-    justifyContent: 'start',
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
     alignItems: 'center',
     alignContent: 'center'
   }

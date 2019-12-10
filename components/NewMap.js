@@ -79,7 +79,8 @@ export default class NewMap extends React.Component {
   componentWillUnmount() {
     navigator.geolocation.clearWatch(this.watchID);
   }
-
+//Use caldDistance to render the distance traveled on map
+//Include both km and mile in choices in distance
   getMapRegion = () => ({
     latitude: this.state.latitude,
     longitude: this.state.longitude,
@@ -113,7 +114,7 @@ export default class NewMap extends React.Component {
         <View style={styles.buttonContainer}>
           <TouchableOpacity style={[styles.bubble, styles.button]}>
             <Text style={styles.bottomBarContent}>
-              {parseFloat(this.state.distanceTravelled).toFixed(2)} km
+              {parseFloat(this.state.distanceTravelled).toFixed(2)} m
             </Text>
           </TouchableOpacity>
           <View style={{backgroundColor: 'orange', marginRight: 15}}>

@@ -48,7 +48,7 @@ export default class Login extends React.Component {
             style={{
               marginTop: 90,
               fontSize: 25,
-              fontWeight: 500,
+              fontWeight: "500",
               color: "white"
             }}
           >
@@ -103,8 +103,8 @@ export default class Login extends React.Component {
 const styles = StyleSheet.create({
   container: {
     marginTop: 100,
-    flexDirect: 'column',
-    justifyContent: 'start',
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
     alignItems: 'center',
     alignContent: 'center'
   },
