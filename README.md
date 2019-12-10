@@ -18,6 +18,8 @@ Future direction for this project include the ability to save a hike, the abilit
   
   npm install 
   
+  You will need an api key from the Google Firestore for the app to work, you may obtain one here
+  
   npm start
   
   Scan the QR code using your phone's camera
@@ -25,3 +27,5 @@ Future direction for this project include the ability to save a hike, the abilit
   Expo will launch and Bundle javascript 
   
   You will then have access to to Hike With Me
+  
+  
