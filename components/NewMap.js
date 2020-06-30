@@ -2,6 +2,7 @@ import React from "react";
 import { StyleSheet, View, Text, TouchableOpacity, Platform, Dimensions, Button } from 'react-native';
 import MapView, { Marker, AnimatedRegion, Polyline} from 'react-native-maps';
 import haversine from 'haversine';
+// import geolocation from '@react-native-community/geolocation';
 
 
 const {height, width} = Dimensions.get('window')
@@ -66,7 +67,7 @@ export default class NewMap extends React.Component {
           prevLatLng: newCoordinate
         });
       },
-      error => console.log(error),
+      error => console.log('watch position function', error),
       {
         enableHighAccuracy: true,
         timeout: 20000,
