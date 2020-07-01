@@ -62,4 +62,6 @@ buck-out/
 .expo/*
 web-build/
 
-*/firebase/config.js
+# web
+web/firebase-config.js
+
