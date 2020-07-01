@@ -63,5 +63,5 @@ buck-out/
 web-build/
 
 # web
-firebase-oldconfig.js
+/firebase-oldconfig.js
 
