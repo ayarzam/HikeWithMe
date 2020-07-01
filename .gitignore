@@ -63,5 +63,5 @@ buck-out/
 web-build/
 
 # web
-/firebase-config.js
+/firebase/config.js
 
